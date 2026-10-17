@@ -1,0 +1,12 @@
+# Entornos de Python
+backend/venv/
+backend/__pycache__/
+*.pyc
+
+# Dependencias de Node.js (Frontend)
+frontend/node_modules/
+frontend/dist/
+
+# Archivos de entorno y SO
+.env
+.DS_Store

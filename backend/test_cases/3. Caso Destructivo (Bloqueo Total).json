@@ -1,0 +1,10 @@
+{
+  "action_id": "act_003",
+  "agent_name": "DB_Cleanup_Agent",
+  "operation_type": "database_query",
+  "target_system": "MySQL_Production",
+  "payload": {
+    "query": "DELETE FROM users WHERE last_login < '2025-01-01';",
+    "affected_rows_estimate": 15420
+  }
+}

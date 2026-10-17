@@ -1,0 +1,11 @@
+{
+  "action_id": "act_001",
+  "agent_name": "MarketingBot_V2",
+  "operation_type": "email_send",
+  "target_system": "SendGrid",
+  "payload": {
+    "to": "nuevo.usuario@empresa.com",
+    "subject": "¡Bienvenido a 30X!",
+    "body": "Hola. Gracias por unirte a nuestra plataforma. Aquí tienes los primeros pasos para configurar tu cuenta."
+  }
+}
