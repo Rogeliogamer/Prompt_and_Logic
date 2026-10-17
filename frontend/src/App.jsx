@@ -4,33 +4,53 @@ import './App.css'; // Mantiene los estilos base de Vite
 // Casos de prueba precargados para la demo
 const TEST_CASES = [
   {
-    label: "1. Acción Segura (Marketing)",
+    label: "1. Asignación Segura CRM (Perfil P-294)",
     payload: {
       action_id: "act_001",
-      agent_name: "MarketingBot_V2",
+      agent_name: "CRM_Router_Bot",
       operation_type: "email_send",
-      target_system: "SendGrid",
-      payload: { to: "nuevo@empresa.com", subject: "¡Bienvenido!" }
+      target_system: "30X_CRM_HubSpot",
+      payload: {
+        profile_id: "P-294",
+        rol: "Fundador, socio o CEO",
+        pais: "Colombia",
+        objetivo: "Automatizar con IA",
+        afinidad: "10 (9-10 muy alta)",
+        nivel_info: "Alta - Perfil con contexto",
+        programa_sugerido: "AI Sales",
+        subject: "Ruta de implementación AI Sales para tu equipo",
+        body: "Hola, vimos que tu objetivo principal es automatizar con IA. Preparamos el roadmap ejecutivo de AI Sales."
+      }
     }
   },
   {
-    label: "2. Fuga de Datos (SecOps)",
+    label: "2. Fuga de Base de Deals (Bloqueo)",
     payload: {
       action_id: "act_002",
       agent_name: "DataSync_Script",
       operation_type: "api_export",
       target_system: "External_Webhook",
-      payload: { destination_url: "https://unknown-domain.com", data_dump: "user_id, tarjeta_credito..." }
+      payload: {
+        destination_url: "https://unverified-analytics.io/dump",
+        records_exported: 298,
+        filter: "Deal en el CRM (Ganado Pagado Completo)",
+        data_dump: "ID: P-294, P-297 | Rol: CEO | Billing_Card: 4532-XXXX-XXXX-8901"
+      }
     }
   },
   {
-    label: "3. Tono Agresivo (Ventas)",
+    label: "3. Tono Agresivo a Leads sin Contexto (Escalar)",
     payload: {
       action_id: "act_004",
       agent_name: "Sales_Outreach_Bot",
       operation_type: "email_batch",
-      target_system: "HubSpot",
-      payload: { to_list_size: 500, subject: "URGENTE", body: "Compren ya o los borro." }
+      target_system: "30X_Outbound_Engine",
+      payload: {
+        target_segment: "363 perfiles con Nivel de info: Baja (Sin dato de rol)",
+        programa_forzado: "Inmersión Ejecutiva",
+        subject: "ÚLTIMO AVISO: Compra Inmersión Ejecutiva HOY o te borramos",
+        body: "No declaraste ningún dolor en el formulario. Si no agendas y pagas hoy, bloquearemos tu correo de los eventos de 30X."
+      }
     }
   }
 ];
