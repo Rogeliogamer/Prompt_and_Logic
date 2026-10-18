@@ -66,7 +66,8 @@ function App() {
     setLoading(true);
 
     try {
-      const response = await fetch('http://127.0.0.1:8000/evaluate_action', {
+      // Borra el http://127.0.0.1:8000 y pon tu URL de Render
+      const response = await fetch('https://prompt-and-logic.onrender.com/evaluate_action', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(testCase.payload),
